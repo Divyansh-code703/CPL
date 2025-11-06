@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Class Premier League (CPL)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div class="brand">
+        <img src="https://raw.githubusercontent.com/github/explore/main/topics/cricket/cricket.png" alt="logo" />
+        <div>
+          <h1>CLASS PREMIER LEAGUE</h1>
+          <small>Mobile • 5-over matches • Auction • Retention • Trading</small>
+        </div>
+      </div>
+      <div class="status-line" id="statusLine">Ready</div>
+    </header>
+
+    <main class="main">
+      <section class="controls">
+        <button class="btn" id="btn-auction">Auction Room</button>
+        <button class="btn" id="btn-schedule">Schedule & Standings</button>
+        <button class="btn" id="btn-play">Play Match</button>
+        <button class="btn" id="btn-trade">Trade / Unsold</button>
+      </section>
+
+      <section id="view" class="view">
+        <!-- Dynamic content injected by script.js -->
+        <div class="welcome">
+          <h2>Welcome to CPL</h2>
+          <p>6 Teams • Budget: ₹150 Cr each • 66+ Players pool • 11 per team</p>
+          <div class="quick">
+            <button class="btn" onclick="startAutoSetup()">Auto-assign balanced rosters</button>
+            <button class="btn" onclick="resetSeason()">Reset Season</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div id="caps">
+        Orange Cap: <span id="orangeCap">—</span> |
+        Purple Cap: <span id="purpleCap">—</span>
+      </div>
+      <div>Saved locally • Use same browser to continue</div>
+    </footer>
+  </div>
+
+  <!-- Main script -->
+  <script src="script.js" defer></script>
+</body>
+          </html>
