@@ -1,57 +1,42 @@
-/* style.css — CPL mobile-friendly styles */
+/* Trendify – style.css (Full E-Commerce UI) */
 
-:root{
-  --bg1:#021126;
-  --bg2:#003b7a;
-  --card: rgba(255,255,255,0.04);
-  --accent: #ffb400;
-  --muted: rgba(255,255,255,0.7);
-}
+{ margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
 
-*{box-sizing:border-box}
-html,body{height:100%;margin:0;font-family:Inter,system-ui,Arial;color:#fff;background:linear-gradient(160deg,var(--bg1),var(--bg2))}
-#app{max-width:920px;margin:0 auto;padding:12px}
-.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.brand{display:flex;align-items:center;gap:10px}
-.brand img{width:46px;height:46px;border-radius:8px;background:#fff;padding:6px}
-.brand h1{margin:0;font-size:18px;color:var(--accent);letter-spacing:0.6px}
-.status-line{font-size:12px;color:var(--muted)}
 
-.main{margin-top:14px}
-.controls{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
-.btn{flex:1;padding:10px;border-radius:10px;border:none;background:var(--card);color:#fff;font-weight:700}
-.btn:active{transform:scale(0.995)}
-.view{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:12px;border-radius:12px;min-height:320px;box-shadow:0 8px 20px rgba(0,0,0,0.5)}
-.welcome{text-align:center}
-.quick{display:flex;gap:8px;justify-content:center;margin-top:12px}
-.section-title{font-size:16px;color:var(--accent);font-weight:800;margin-bottom:8px}
+body { background: #f2f2f2; }
 
-/* small cards */
-.card{background:rgba(255,255,255,0.03);padding:10px;border-radius:10px;margin-bottom:10px}
-.flex-row{display:flex;gap:8px;flex-wrap:wrap}
+/* HEADER */ header { background: #111; color: #fff; padding: 15px; display: flex; justify-content: space-between; align-items: center; }
 
-/* auction list */
-.player-item{display:flex;justify-content:space-between;align-items:center;padding:8px;border-radius:8px;background:rgba(0,0,0,0.12);margin-bottom:8px}
-.small{font-size:13px;color:var(--muted)}
+.logo { font-size: 26px; font-weight: bold; }
 
-/* roster grid */
-.roster-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
-.team-card{padding:8px;border-radius:8px;background:rgba(0,0,0,0.12)}
+header input { width: 40%; padding: 8px; border-radius: 4px; border: none; }
 
-/* schedule list */
-.fixture{padding:8px;border-radius:8px;background:rgba(255,255,255,0.03);margin-bottom:8px}
-.fixture .muted{font-size:13px;color:var(--muted)}
+.buttons button { margin-left: 10px; padding: 8px 12px; background: #fff; color: #111; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; }
 
-/* modal-ish action */
-.action-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
-.small-btn{padding:8px;border-radius:8px;background:var(--accent);border:none;color:#000;font-weight:700}
+/* FILTERS */ .filters { display: flex; gap: 10px; padding: 15px; justify-content: center; background: #fff; }
 
-/* footer */
-.footer{margin-top:12px;font-size:13px;color:var(--muted);display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.filters select { padding: 8px; border-radius: 4px; border: 1px solid #ccc; }
 
-/* responsive tweaks */
-@media(min-width:720px){
-  .controls{gap:12px}
-  .btn{padding:12px}
-  .roster-grid{grid-template-columns:repeat(3,1fr)}
-  }
+/* PRODUCT LIST */ .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; padding: 20px; }
+
+.product { background: #fff; padding: 10px; border-radius: 6px; box-shadow: 0 0 5px rgba(0,0,0,0.1); text-align: center; cursor: pointer; transition: 0.2s; }
+
+.product:hover { transform: scale(1.03); }
+
+.product img { width: 100%; height: 200px; object-fit: cover; border-radius: 6px; }
+
+.product button { background: #111; color: #fff; border: none; padding: 8px 12px; margin-top: 8px; border-radius: 4px; cursor: pointer; }
+
+/* DETAIL PAGE */ .detail-page { padding: 20px; text-align: center; }
+
+.detail-img { width: 250px; height: 250px; border-radius: 10px; object-fit: cover; margin-bottom: 10px; }
+
+.back-btn { background: #111; color: #fff; padding: 8px 12px; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 15px; }
+
+/* CART */ .cart-page { background: white; padding: 20px; min-height: 300px; }
+
+#cartItems div { background: #eee; padding: 10px; margin: 10px 0; border-radius: 6px; }
+
+.close-cart { background: crimson; color: white; border: none; padding: 10px 15px; border-radius: 4px; cursor: pointer; }
+
+.hidden { display: none; }
