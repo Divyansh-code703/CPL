@@ -1,55 +1,150 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Class Premier League (CPL)</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div id="app">
-    <header class="topbar">
-      <div class="brand">
-        <img src="https://raw.githubusercontent.com/github/explore/main/topics/cricket/cricket.png" alt="logo" />
-        <div>
-          <h1>CLASS PREMIER LEAGUE</h1>
-          <small>Mobile • 5-over matches • Auction • Retention • Trading</small>
-        </div>
-      </div>
-      <div class="status-line" id="statusLine">Ready</div>
-    </header>
+/* Trendify – style.css (Full E-Commerce UI) */
 
-    <main class="main">
-      <section class="controls">
-        <button class="btn" id="btn-auction">Auction Room</button>
-        <button class="btn" id="btn-schedule">Schedule & Standings</button>
-        <button class="btn" id="btn-play">Play Match</button>
-        <button class="btn" id="btn-trade">Trade / Unsold</button>
-      </section>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
-      <section id="view" class="view">
-        <!-- Dynamic content injected by script.js -->
-        <div class="welcome">
-          <h2>Welcome to CPL</h2>
-          <p>6 Teams • Budget: ₹150 Cr each • 66+ Players pool • 11 per team</p>
-          <div class="quick">
-            <button class="btn" onclick="startAutoSetup()">Auto-assign balanced rosters</button>
-            <button class="btn" onclick="resetSeason()">Reset Season</button>
-          </div>
-        </div>
-      </section>
-    </main>
+body {
+    background: #f2f2f2;
+}
 
-    <footer class="footer">
-      <div id="caps">
-        Orange Cap: <span id="orangeCap">—</span> |
-        Purple Cap: <span id="purpleCap">—</span>
-      </div>
-      <div>Saved locally • Use same browser to continue</div>
-    </footer>
-  </div>
+/* HEADER */
+header {
+    background: #111;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-  <!-- Main script -->
-  <script src="script.js" defer></script>
-</body>
-          </html>
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+header input {
+    width: 40%;
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+}
+
+.buttons button {
+    margin-left: 10px;
+    padding: 8px 12px;
+    background: #fff;
+    color: #111;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* FILTERS */
+.filters {
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+    justify-content: center;
+    background: #fff;
+}
+
+.filters select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* PRODUCT LIST */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.product {
+    background: #fff;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.product:hover {
+    transform: scale(1.03);
+}
+
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.product button {
+    background: #111;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    margin-top: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* DETAIL PAGE */
+.detail-page {
+    padding: 20px;
+    text-align: center;
+}
+
+.detail-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.back-btn {
+    background: #111;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+/* CART */
+.cart-page {
+    background: white;
+    padding: 20px;
+    min-height: 300px;
+}
+
+#cartItems div {
+    background: #eee;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+}
+
+.close-cart {
+    background: crimson;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
