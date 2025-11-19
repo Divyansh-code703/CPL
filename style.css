@@ -1,21 +1,27 @@
+/* ===============================
+   GLOBAL STYLING
+================================ */
 
-/* Trendify – style.css */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: "Poppins", Arial, sans-serif;
 }
 
 body {
     background: #f2f2f2;
 }
 
-/* HEADER */
+
+/* ===============================
+   HEADER
+================================ */
+
 header {
     background: #111;
     color: #fff;
-    padding: 15px;
+    padding: 14px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,53 +29,67 @@ header {
 
 .logo {
     font-size: 26px;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 header input {
     width: 40%;
-    padding: 8px;
-    border-radius: 4px;
+    padding: 10px 12px;
+    border-radius: 5px;
     border: none;
+    outline: none;
 }
 
 .buttons button {
-    margin-left: 10px;
-    padding: 8px 12px;
+    padding: 10px 15px;
     background: #fff;
     color: #111;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: 600;
 }
 
-/* FILTERS */
+.buttons button:hover {
+    background: #ddd;
+}
+
+
+/* ===============================
+   FILTERS
+================================ */
+
 .filters {
     display: flex;
     justify-content: center;
+    gap: 10px;
     padding: 15px;
-    background: #fff;
+    background: white;
 }
 
 .filters select {
-    padding: 8px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    font-size: 15px;
 }
 
-/* PRODUCT LIST */
+
+/* ===============================
+   PRODUCT LIST
+================================ */
+
 .products {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 18px;
     padding: 20px;
 }
 
 .product {
-    background: #fff;
-    padding: 10px;
-    border-radius: 6px;
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
     text-align: center;
     cursor: pointer;
     transition: 0.2s;
@@ -87,62 +107,156 @@ header input {
     object-fit: cover;
 }
 
-.product button {
-    padding: 8px 12px;
-    background: #111;
-    color: white;
-    border: none;
-    margin-top: 8px;
-    border-radius: 4px;
-    cursor: pointer;
+.product h3 {
+    margin-top: 10px;
+    font-size: 18px;
 }
 
-/* DETAIL PAGE */
+.product p {
+    font-weight: 600;
+    margin: 5px 0;
+}
+
+
+/* ===============================
+   DETAIL PAGE
+================================ */
+
 .detail-page {
     padding: 20px;
     text-align: center;
 }
 
 .detail-img {
-    width: 250px;
-    height: 250px;
-    border-radius: 8px;
+    width: 260px;
+    height: 260px;
+    border-radius: 10px;
     object-fit: cover;
     margin-bottom: 10px;
 }
 
-.back-btn {
-    padding: 8px 12px;
-    background: #111;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+.desc {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #444;
+    padding: 0 20px;
 }
 
-/* CART */
+.back-btn {
+    background: #111;
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.back-btn:hover {
+    background: #333;
+}
+
+.buy-btn {
+    padding: 10px 14px;
+    background: #28a745;
+    color: white;
+    border: none;
+    margin-top: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.buy-btn:hover {
+    background: #1e7e34;
+}
+
+
+/* ===============================
+   CART PAGE
+================================ */
+
 .cart-page {
     background: white;
     padding: 20px;
     min-height: 300px;
 }
 
-#cartItems div {
+.cart-box {
     background: #eee;
-    padding: 10px;
-    margin: 10px 0;
+    padding: 12px;
     border-radius: 6px;
+    margin-bottom: 12px;
+    font-size: 16px;
 }
 
-.close-cart {
+.remove-btn {
     background: crimson;
     color: white;
     border: none;
     padding: 7px 12px;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
+.remove-btn:hover {
+    background: rgb(185, 0, 0);
+}
+
+
+/* ===============================
+   PAYMENT PAGE
+================================ */
+
+#paymentPage {
+    padding: 25px;
+    background: #fff;
+    min-height: 300px;
+}
+
+.payment-box {
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 7px;
+    max-width: 350px;
+    margin: auto;
+    text-align: center;
+}
+
+.payment-box input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #bbb;
+    margin: 10px 0;
+}
+
+.pay-btn {
+    background: #007bff;
+    padding: 10px 15px;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.pay-btn:hover {
+    background: #0056b3;
+}
+
+.success {
+    color: green;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+
+
+/* ===============================
+   HIDDEN UTILITY
+================================ */
+
 .hidden {
     display: none;
-}
+    }
