@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trendify – Clothing Store</title>
-
-    <!-- LINKING CSS -->
+    <title>Trendify – Online Shopping</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,19 +12,20 @@
     <!-- HEADER -->
     <header>
         <div class="logo">Trendify</div>
-        <input type="text" placeholder="Search clothes..." onkeyup="searchProducts(this.value)">
-        <div class="buttons">
-            <button onclick="openCart()">Cart</button>
-        </div>
+        <input type="text" placeholder="Search for products..." onkeyup="searchProducts(this.value)">
+        <button class="cart-btn" onclick="openCart()">🛒 Cart</button>
     </header>
 
-    <!-- FILTERS -->
+    <!-- CATEGORY FILTERS -->
     <div class="filters">
         <select onchange="filterCategory(this.value)">
             <option value="all">All</option>
             <option value="men">Men</option>
             <option value="women">Women</option>
             <option value="kids">Kids</option>
+            <option value="electronics">Electronics</option>
+            <option value="shoes">Shoes</option>
+            <option value="watches">Watches</option>
         </select>
     </div>
 
@@ -35,7 +34,7 @@
         <div id="productList" class="products"></div>
     </div>
 
-    <!-- DETAIL PAGE -->
+    <!-- PRODUCT DETAIL PAGE -->
     <div id="detailPage" class="hidden detail-page"></div>
 
     <!-- CART PAGE -->
@@ -45,7 +44,23 @@
         <div id="cartItems"></div>
     </div>
 
-    <!-- LINKING JS -->
+    <!-- PAYMENT PAGE -->
+    <div id="paymentPage" class="hidden payment-page">
+        <button class="back-btn" onclick="goHome()">← Back</button>
+        <h2>Payment</h2>
+
+        <p>Dummy Payment Gateway</p>
+
+        <div class="pay-box">
+            <input type="text" placeholder="Full Name">
+            <input type="text" placeholder="Card Number">
+            <input type="text" placeholder="CVV">
+            <button onclick="confirmOrder()">Pay Now</button>
+        </div>
+
+        <p id="paySuccess" class="hidden success">Order Placed Successfully 🎉</p>
+    </div>
+
     <script src="script.js"></script>
 </body>
     </html>
